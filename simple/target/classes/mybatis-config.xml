@@ -25,6 +25,10 @@
             <dataSource type="UNPOOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://192.168.113.170:3306/mybatis"/>
+                <!--
+                    <property name="url" value="jdbc:mysql://192.168.113.170:3306/mybatis"/>
+                -->
+                <property name="url" value="jdbc:mysql://192.168.227.131:3306/mybatis"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
             </dataSource>

@@ -71,4 +71,12 @@ public interface UserMapper {
      * @return
      */
     List<SysRole> selectRolesByUserIdAndRoleEnabled(@Param("userId")Long userId, @Param("enabled")Integer enabled);
+
+    /**
+     * @param user
+     * @return
+     * */
+    List<SysUser> selectByUser(SysUser user);
+
+    int updateByIdSelective(SysUser sysUser);
 }

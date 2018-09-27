@@ -52,7 +52,7 @@ public class UserMapperTest extends BaseMapperTest {
             int result = mapper.insert(user);
             Assert.assertEquals(1, result);
             Assert.assertNull(user.getId());
-        }finally {
+        } finally {
             sqlSession.rollback();
             sqlSession.close();
         }
@@ -69,7 +69,7 @@ public class UserMapperTest extends BaseMapperTest {
             Assert.assertNotNull(user.getId());
 
             System.out.println(user.getId());
-        }finally {
+        } finally {
             sqlSession.rollback();
             sqlSession.close();
         }
@@ -86,16 +86,16 @@ public class UserMapperTest extends BaseMapperTest {
             Assert.assertNotNull(user.getId());
 
             System.out.println(user.getId());
-        }finally {
+        } finally {
             sqlSession.rollback();
             sqlSession.close();
         }
     }
 
     @Test
-    public void testUpdateById(){
+    public void testUpdateById() {
         SqlSession sqlSession = this.getSqlSession();
-        try{
+        try {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             SysUser user = mapper.selectById(1L);
             Assert.assertEquals("admin", user.getUserName());
@@ -106,42 +106,90 @@ public class UserMapperTest extends BaseMapperTest {
             Assert.assertEquals(1, result);
             user = mapper.selectById(1L);
             Assert.assertEquals("admin_test", user.getUserName());
-        }finally {
+        } finally {
             sqlSession.rollback();
             sqlSession.close();
         }
     }
 
     @Test
-    public void testDeleteById(){
+    public void testDeleteById() {
         SqlSession sqlSession = this.getSqlSession();
-        try{
+        try {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             SysUser user = mapper.selectById(1L);
             Assert.assertNotNull(user);
 
             Assert.assertEquals(1, mapper.deleteById(user));
             Assert.assertNull(mapper.selectById(1L));
-        }finally {
+        } finally {
             sqlSession.rollback();
             sqlSession.close();
         }
     }
 
     @Test
-    public void testSelectRolesByUserIdAndRoleEnabled(){
+    public void testSelectRolesByUserIdAndRoleEnabled() {
         SqlSession sqlSession = this.getSqlSession();
-        try{
+        try {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             List<SysRole> roles = mapper.selectRolesByUserIdAndRoleEnabled(1L, 1);
             Assert.assertNotNull(roles);
             Assert.assertTrue(roles.size() > 0);
-        }finally {
+        } finally {
             sqlSession.close();
         }
     }
 
-    private SysUser createUser(){
+    @Test
+    public void testSelectByUser() {
+        SqlSession sqlSession = this.getSqlSession();
+        try {
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            SysUser query = new SysUser();
+            query.setUserName("ad");
+            List<SysUser> users = mapper.selectByUser(query);
+            Assert.assertTrue(users.size() > 0);
+
+            query = new SysUser();
+            query.setUserEmail("test@mybatis.tk");
+            users = mapper.selectByUser(query);
+            Assert.assertTrue(users.size() > 0);
+
+            query = new SysUser();
+            query.setUserName("ad");
+            query.setUserEmail("test@mybatis.tk");
+            users = mapper.selectByUser(query);
+            Assert.assertTrue(users.size() == 0);
+
+        } finally {
+            sqlSession.close();
+        }
+    }
+
+
+    @Test
+    public void testUpdateByIdSelective() {
+        SqlSession sqlSession = this.getSqlSession();
+        try {
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            SysUser user = new SysUser();
+            user.setId(1L);
+            user.setUserEmail("test@mybatis.tk");
+            int result = mapper.updateByIdSelective(user);
+            Assert.assertEquals(1, result);
+
+            user = mapper.selectById(1L);
+            Assert.assertEquals("admin", user.getUserName());
+            Assert.assertEquals("test@mybatis.tk", user.getUserEmail());
+
+        } finally {
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
+    private SysUser createUser() {
         SysUser user = new SysUser();
         user.setUserName("jack");
         user.setUserPassword("123456");
