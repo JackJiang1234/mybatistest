@@ -143,4 +143,53 @@
 		where id = #{id}
 	</update>
 
+	<select id="selectByIdOrUserName" resultType="jack.mybatis.simple.model.SysUser">
+		select id,
+		user_name userName,
+		user_password userPassword,
+		user_email userEmail,
+		user_info userInfo,
+		head_img headImg,
+		create_time createTime
+		from sys_user
+		where 1 = 1
+		<choose>
+			<when test="id != null">
+				and id = #{id}
+			</when>
+			<when test="userName != null and userName != ''">
+				and user_name = #{userName}
+			</when>
+			<otherwise>
+				limit 0
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="selectByIdList" resultType="jack.mybatis.simple.model.SysUser">
+		select id,
+		user_name userName,
+		user_password userPassword,
+		user_email userEmail,
+		user_info userInfo,
+		head_img headImg,
+		create_time createTime
+		from sys_user
+		where id in
+		<foreach collection="list" open="(" close=")" separator="," item="id" index="i">
+			#{id}
+		</foreach>
+	</select>
+
+	<insert id="insertList" useGeneratedKeys="true" keyProperty="id">
+		insert into sys_user(
+		user_name, user_password,user_email,
+		user_info, head_img, create_time)
+		values
+		<foreach collection="list" item="user" separator=",">
+			(
+			#{user.userName}, #{user.userPassword},#{user.userEmail},
+			#{user.userInfo}, #{user.headImg, jdbcType=BLOB}, #{user.createTime, jdbcType=TIMESTAMP})
+		</foreach>
+	</insert>
 </mapper>

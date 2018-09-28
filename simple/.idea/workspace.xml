@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ee5033b-8420-4c8e-91f2-d54061461877" name="Default Changelist" comment="" />
+    <list default="true" id="71892b4b-c500-42ec-8f43-75d64bdc686a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jack/mybatis/Generator/Generator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/AlgorithmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jack/mybatis/simple/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jack/mybatis/simple/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/CountryMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/CountryMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jack/mybatis/simple/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jack/mybatis/simple/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jack/mybatis/simple/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jack/mybatis/simple/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/jack/mybatis/simple/mapper/CountryMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/jack/mybatis/simple/mapper/CountryMapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/jack/mybatis/simple/mapper/UserMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/jack/mybatis/simple/mapper/UserMapperTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,35 +25,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-112738707">
+    <session id="664913459">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="8" />
+          <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="8" />
+          <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="476" />
-          <entry key="xml" value="52" />
+          <entry key="java" value="1420" />
+          <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="476" />
-          <entry key="XML" value="52" />
+          <entry key="JAVA" value="1420" />
+          <entry key="XML" value="20" />
         </counts>
       </usages-collector>
     </session>
@@ -46,10 +62,54 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/simple/model/Country.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="193">
+              <caret line="250" column="13" selection-start-line="250" selection-start-column="13" selection-end-line="250" selection-end-column="13" />
+              <folding>
+                <element signature="e#6987#6993#0" expanded="true" />
+                <element signature="e#7539#7548#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="50" column="41" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/Generator/Generator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="19" column="72" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#191#199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="31" column="55" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -57,29 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/CountryMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="method#threeSumImpl#0;class#CountryMapperTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="184" column="12" lean-forward="true" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="119" column="37" lean-forward="true" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
+            <state relative-caret-position="521">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -88,12 +127,28 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/simple/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="80" column="27" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="27" />
+              <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="194" column="9" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -101,17 +156,31 @@
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="D:/javaTest/SpringInAction/Chapter_01/knight" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_01/knight" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_02/stereo-autoconfig" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_02/stereo-javaconfig" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_02/stereo-mixedconfig" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_02/stereo-xmlconfig" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_03/conditional" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_03/externals" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_03/profiles" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_03/scopedbeans" value="PREVIEW" />
+        <entry key="D:/java/spring/SpringiA4_SourceCode/Chapter_05/Spittr" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/CountryMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/AlgorithmTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/jack/mybatis/simple/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/jack/mybatis/Generator/Generator.java" />
       </list>
     </option>
   </component>
@@ -121,20 +190,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="259" />
-    <option name="y" value="19" />
-    <option name="width" value="1401" />
-    <option name="height" value="1001" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,7 +236,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
+              <item name="jack" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simple" type="b2602c69:ProjectViewProjectNode" />
@@ -174,8 +244,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="jack" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simple" type="b2602c69:ProjectViewProjectNode" />
@@ -183,17 +253,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="type" type="462c0819:PsiDirectoryNode" />
+              <item name="jack" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="Generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simple" type="b2602c69:ProjectViewProjectNode" />
@@ -208,42 +270,29 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simple" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538062020618" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538128874811" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,40 +306,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.testUpdateByIdSelective">
-    <configuration name="CountryMapperTest.testSelectAllUseInterface" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Generator">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jack.mybatis.Generator.Generator" />
       <module name="simple" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jack.mybatis.simple.mapper.*" />
+          <option name="PATTERN" value="jack.mybatis.Generator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jack.mybatis.simple.mapper" />
-      <option name="MAIN_CLASS_NAME" value="jack.mybatis.simple.mapper.CountryMapperTest" />
-      <option name="METHOD_NAME" value="testSelectAllUseInterface" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountryMapperTest.threeSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simple" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jack.mybatis.simple.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jack.mybatis.simple.mapper" />
-      <option name="MAIN_CLASS_NAME" value="jack.mybatis.simple.mapper.CountryMapperTest" />
-      <option name="METHOD_NAME" value="threeSum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.testInsertList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple" />
       <extension name="coverage">
         <pattern>
@@ -300,13 +330,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="jack.mybatis.simple.mapper" />
       <option name="MAIN_CLASS_NAME" value="jack.mybatis.simple.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="METHOD_NAME" value="testInsertList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest.testSelectByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.testSelectByIdList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple" />
       <extension name="coverage">
         <pattern>
@@ -316,13 +346,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="jack.mybatis.simple.mapper" />
       <option name="MAIN_CLASS_NAME" value="jack.mybatis.simple.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testSelectByUser" />
+      <option name="METHOD_NAME" value="testSelectByIdList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest.testUpdateByIdSelective" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.testSelectbyIdOrUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple" />
       <extension name="coverage">
         <pattern>
@@ -332,26 +362,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="jack.mybatis.simple.mapper" />
       <option name="MAIN_CLASS_NAME" value="jack.mybatis.simple.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testUpdateByIdSelective" />
+      <option name="METHOD_NAME" value="testSelectbyIdOrUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CountryMapperTest.threeSum" />
-      <item itemvalue="JUnit.CountryMapperTest.testSelectAllUseInterface" />
-      <item itemvalue="JUnit.UserMapperTest.testSelectAll" />
-      <item itemvalue="JUnit.UserMapperTest.testSelectByUser" />
-      <item itemvalue="JUnit.UserMapperTest.testUpdateByIdSelective" />
+      <item itemvalue="JUnit.UserMapperTest.testSelectbyIdOrUserName" />
+      <item itemvalue="JUnit.UserMapperTest.testSelectByIdList" />
+      <item itemvalue="JUnit.UserMapperTest.testInsertList" />
+      <item itemvalue="Application.Generator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserMapperTest.testUpdateByIdSelective" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectByUser" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectAll" />
-        <item itemvalue="JUnit.CountryMapperTest.testSelectAllUseInterface" />
-        <item itemvalue="JUnit.CountryMapperTest.threeSum" />
+        <item itemvalue="Application.Generator" />
+        <item itemvalue="JUnit.UserMapperTest.testInsertList" />
+        <item itemvalue="JUnit.UserMapperTest.testSelectByIdList" />
+        <item itemvalue="JUnit.UserMapperTest.testSelectbyIdOrUserName" />
       </list>
     </recent_temporary>
   </component>
@@ -360,44 +388,52 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5ee5033b-8420-4c8e-91f2-d54061461877" name="Default Changelist" comment="" />
-      <created>1538057576103</created>
+      <changelist id="71892b4b-c500-42ec-8f43-75d64bdc686a" name="Default Changelist" comment="" />
+      <created>1538096770744</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1538057576103</updated>
-      <workItem from="1538057577524" duration="3400000" />
+      <updated>1538096770744</updated>
+      <workItem from="1538096773471" duration="15608000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CountryMapperTest_threeSum - 2018.09.27 at 22h 56m 46s.xml">
-      <configuration name="CountryMapperTest.threeSum" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectbyIdOrUserName - 2018.09.28 at 15h 00m 59s.xml">
+      <configuration name="UserMapperTest.testSelectbyIdOrUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CountryMapperTest_testSelectAllUseInterface - 2018.09.27 at 22h 57m 11s.xml">
-      <configuration name="CountryMapperTest.testSelectAllUseInterface" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectbyIdOrUserName - 2018.09.28 at 15h 01m 53s.xml">
+      <configuration name="UserMapperTest.testSelectbyIdOrUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectAll - 2018.09.27 at 22h 58m 56s.xml">
-      <configuration name="UserMapperTest.testSelectAll" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectbyIdOrUserName - 2018.09.28 at 15h 02m 27s.xml">
+      <configuration name="UserMapperTest.testSelectbyIdOrUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2018.09.27 at 23h 11m 47s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectByIdList - 2018.09.28 at 16h 15m 51s.xml">
+      <configuration name="UserMapperTest.testSelectByIdList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2018.09.27 at 23h 12m 35s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectByIdList - 2018.09.28 at 16h 16m 20s.xml">
+      <configuration name="UserMapperTest.testSelectByIdList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2018.09.27 at 23h 14m 12s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectByIdList - 2018.09.28 at 16h 50m 49s.xml">
+      <configuration name="UserMapperTest.testSelectByIdList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2018.09.27 at 23h 15m 17s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertList - 2018.09.28 at 16h 54m 09s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testInsertList - 2018.09.28 at 16h 56m 04s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testInsertList - 2018.09.28 at 16h 58m 02s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testInsertList - 2018.09.28 at 17h 00m 59s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3400000" />
+    <option name="totallyTimeSpent" value="15608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -413,7 +449,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,55 +472,99 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Java/jdk1.8.0_162/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/simple/model/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/CountryMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="method#threeSumImpl#0;class#CountryMapperTest#0" />
-          </folding>
+        <state relative-caret-position="521">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/AlgorithmTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="method#threeSumImpl#0;class#AlgorithmTest#0" />
+            <element signature="method#threeSumImpl2#0;class#AlgorithmTest#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/simple/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="80" column="27" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="27" />
+          <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/jack/mybatis/simple/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="119" column="37" lean-forward="true" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
+        <state relative-caret-position="390">
+          <caret line="194" column="9" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jack/mybatis/simple/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="184" column="12" lean-forward="true" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
+        <state relative-caret-position="193">
+          <caret line="250" column="13" selection-start-line="250" selection-start-column="13" selection-end-line="250" selection-end-column="13" />
+          <folding>
+            <element signature="e#6987#6993#0" expanded="true" />
+            <element signature="e#7539#7548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/model/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1557">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/dao/CountryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/xml/CountryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jack/mybatis/Generator/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#191#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>

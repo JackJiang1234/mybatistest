@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -167,7 +168,6 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
-
     @Test
     public void testUpdateByIdSelective() {
         SqlSession sqlSession = this.getSqlSession();
@@ -185,6 +185,74 @@ public class UserMapperTest extends BaseMapperTest {
 
         } finally {
             sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectbyIdOrUserName() {
+        SqlSession sqlSession = this.getSqlSession();
+        try {
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            SysUser query = new SysUser();
+            query.setId(1L);
+            query.setUserName("admin");
+
+            SysUser user = mapper.selectByIdOrUserName(query);
+            Assert.assertNotNull(user);
+
+            query.setId(null);
+            user = mapper.selectByIdOrUserName(query);
+            Assert.assertNotNull(user);
+
+            query.setUserName(null);
+            user = mapper.selectByIdOrUserName(query);
+            Assert.assertNull(user);
+        } finally {
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectByIdList() {
+        SqlSession sqlSession = getSqlSession();
+        try {
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            List<Long> idList = new ArrayList<Long>();
+            idList.add(1L);
+            idList.add(1001L);
+            List<SysUser> userList = userMapper.selectByIdList(idList);
+            Assert.assertEquals(2, userList.size());
+        } finally {
+            sqlSession.close();
+        }
+    }
+
+
+    @Test
+    public void testInsertList(){
+        SqlSession sqlSession = getSqlSession();
+        try {
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            //创建一个 user 对象
+            List<SysUser> userList = new ArrayList<SysUser>();
+            for(int i = 0; i < 2; i++){
+                SysUser user = new SysUser();
+                user.setUserName("test" + i);
+                user.setUserPassword("123456");
+                user.setUserEmail("test@mybatis.tk");
+                userList.add(user);
+            }
+            //将新建的对象批量插入数据库中，特别注意，这里的返回值 result 是执行的 SQL 影响的行数
+            int result = userMapper.insertList(userList);
+            Assert.assertEquals(2, result);
+            for(SysUser user : userList){
+                System.out.println(user.getId());
+            }
+        } finally {
+            //为了不影响数据库中的数据导致其他测试失败，这里选择回滚
+            sqlSession.rollback();
+            //不要忘记关闭 sqlSession
             sqlSession.close();
         }
     }

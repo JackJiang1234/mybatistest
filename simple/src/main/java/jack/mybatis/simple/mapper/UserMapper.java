@@ -78,5 +78,27 @@ public interface UserMapper {
      * */
     List<SysUser> selectByUser(SysUser user);
 
+    /**
+     * @param user
+     * */
     int updateByIdSelective(SysUser sysUser);
+
+    /**
+     * @param user
+     * */
+    SysUser selectByIdOrUserName(SysUser sysUser);
+
+    /**
+     * @param idlist
+     * @return
+     * */
+    List<SysUser> selectByIdList(List<Long> idList);
+
+    /**
+     * 批量插入用户信息
+     *
+     * @param userList
+     * @return
+     */
+    int insertList(List<SysUser> userList);
 }
