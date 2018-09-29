@@ -230,13 +230,13 @@ public class UserMapperTest extends BaseMapperTest {
 
 
     @Test
-    public void testInsertList(){
+    public void testInsertList() {
         SqlSession sqlSession = getSqlSession();
         try {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             //创建一个 user 对象
             List<SysUser> userList = new ArrayList<SysUser>();
-            for(int i = 0; i < 2; i++){
+            for (int i = 0; i < 2; i++) {
                 SysUser user = new SysUser();
                 user.setUserName("test" + i);
                 user.setUserPassword("123456");
@@ -246,12 +246,82 @@ public class UserMapperTest extends BaseMapperTest {
             //将新建的对象批量插入数据库中，特别注意，这里的返回值 result 是执行的 SQL 影响的行数
             int result = userMapper.insertList(userList);
             Assert.assertEquals(2, result);
-            for(SysUser user : userList){
+            for (SysUser user : userList) {
                 System.out.println(user.getId());
             }
         } finally {
             //为了不影响数据库中的数据导致其他测试失败，这里选择回滚
             sqlSession.rollback();
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectUserAndRoleById() {
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            //特别注意，在我们测试数据中，id = 1L 的用户有两个角色
+            //由于后面覆盖前面的，因此只能得到最后一个角色
+            //我们这里使用只有一个角色的用户（id = 1001L）
+            //可以用 selectUserAndRoleById2 替换进行测试
+            SysUser user = userMapper.selectUserAndRoleById(1001L);
+            //user 不为空
+            Assert.assertNotNull(user);
+            //user.role 也不为空
+            Assert.assertNotNull(user.getRole());
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectUserAndRoleById2() {
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            //特别注意，在我们测试数据中，id = 1L 的用户有两个角色
+            //由于后面覆盖前面的，因此只能得到最后一个角色
+            //我们这里使用只有一个角色的用户（id = 1001L）
+            //可以用 selectUserAndRoleById2 替换进行测试
+            SysUser user = userMapper.selectUserAndRoleById2(1001L);
+            //user 不为空
+            Assert.assertNotNull(user);
+            //user.role 也不为空
+            Assert.assertNotNull(user.getRole());
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectUserAndRoleByIdSelect(){
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            //特别注意，在我们测试数据中，id = 1L 的用户有两个角色
+            //由于后面覆盖前面的，因此只能得到最后一个角色
+            //我们这里使用只有一个角色的用户（id = 1001L）
+            SysUser user = userMapper.selectUserAndRoleByIdSelect(1001L);
+            //user 不为空
+            Assert.assertNotNull(user);
+            //user.role 也不为空
+
+            //lazyLoadTriggerMethods
+            System.out.println("调用 user.equals(null)");
+            user.equals(null);
+            System.out.println("调用 user.getRole()");
+            Assert.assertNotNull(user.getRole());
+        } finally {
             //不要忘记关闭 sqlSession
             sqlSession.close();
         }

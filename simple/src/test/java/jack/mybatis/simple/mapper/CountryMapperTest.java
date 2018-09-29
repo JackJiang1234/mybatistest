@@ -1,12 +1,7 @@
 package jack.mybatis.simple.mapper;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
-import org.junit.Assert;
 import org.junit.Test;
 
 import jack.mybatis.simple.model.Country;
