@@ -1,7 +1,6 @@
 package jack.mybatis.simple.mapper;
 
-import jack.mybatis.simple.model.SysRole;
-import jack.mybatis.simple.model.SysUser;
+import jack.mybatis.simple.model.*;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
@@ -321,6 +320,50 @@ public class UserMapperTest extends BaseMapperTest {
             user.equals(null);
             System.out.println("调用 user.getRole()");
             Assert.assertNotNull(user.getRole());
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+
+    @Test
+    public void testSelectAllUserAndRoles(){
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            List<SysUser> userList = userMapper.selectAllUserAndRoles();
+            System.out.println("用户数：" + userList.size());
+            for(SysUser user : userList){
+                System.out.println("用户名：" + user.getUserName());
+                for(SysRole role: user.getRoleList()){
+                    System.out.println("角色名：" + role.getRoleName());
+                    for(SysPrivilege privilege : role.getPrivilegeList()){
+                        System.out.println("权限名：" + privilege.getPrivilegeName());
+                    }
+                }
+            }
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectUserById(){
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            SysUser user = new SysUser();
+            user.setId(1L);
+            userMapper.selectUserById(user);
+            Assert.assertNotNull(user.getUserName());
+            System.out.println("用户名：" + user.getUserName());
+            System.out.println("email:" + user.getUserEmail());
         } finally {
             //不要忘记关闭 sqlSession
             sqlSession.close();

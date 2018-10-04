@@ -2,6 +2,7 @@ package jack.mybatis.simple.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 用户表
@@ -37,6 +38,8 @@ public class SysUser implements Serializable {
      */
     private Date createTime;
     private SysRole role;
+
+    private List<SysRole> roleList;
 
     public Long getId() {
         return id;
@@ -100,5 +103,13 @@ public class SysUser implements Serializable {
 
     public void setRole(SysRole role) {
         this.role = role;
+    }
+
+    public List<SysRole> getRoleList(){
+        return roleList;
+    }
+
+    public void setRoleList(List<SysRole> roleList){
+        this.roleList = roleList;
     }
 }

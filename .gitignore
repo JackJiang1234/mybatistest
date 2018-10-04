@@ -27,3 +27,16 @@ hs_err_pid*
 *.class
 simple/target/test-classes/jack/mybatis/simple/mapper/CountryMapperTest.class
 *.class
+
+# IDEA #
+.idea/
+*.iml
+
+# Eclipse #
+.settings/
+.classpath
+.project
+
+# Maven #
+target/
+simple/.idea/workspace.xml

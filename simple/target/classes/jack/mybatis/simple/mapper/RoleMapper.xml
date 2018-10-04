@@ -21,7 +21,12 @@
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <select id="selectRoleById" resultMap="roleMap">
+    <resultMap id="rolePrivilegeListMap" extends="roleMap" type="jack.mybatis.simple.model.SysRole">
+        <collection property="privilegeList" columnPrefix="privilege_"
+                    resultMap="jack.mybatis.simple.mapper.PrivilegeMapper.privilegeMap"/>
+    </resultMap>
+
+    <select id="selectRoleById" resultMap="roleMap" >
         select * from sys_role where id = #{id}
     </select>
     <!--

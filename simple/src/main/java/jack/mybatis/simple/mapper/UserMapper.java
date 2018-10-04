@@ -125,4 +125,20 @@ public interface UserMapper {
      * @return
      */
     SysUser selectUserAndRoleByIdSelect(Long id);
+
+
+    /**
+     * 获取所有的用户以及对应的所有角色
+     *
+     * @return
+     */
+    List<SysUser> selectAllUserAndRoles();
+
+    /**
+     * 使用存储过程查询用户信息
+     *
+     * @param user
+     * @return
+     */
+    void selectUserById(SysUser user);
 }
