@@ -5,6 +5,7 @@ import jack.mybatis.simple.model.SysRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
     /**
@@ -62,6 +63,14 @@ public interface UserMapper {
      * @return
      */
     int deleteById(SysUser sysUser);
+
+    /**
+     * 通过主键删除
+     *
+     * @param id
+     * @return
+     */
+    int deleteById(Long id);
 
     /**
      * 根据用户 id 和 角色的 enabled 状态获取用户的角色
@@ -141,4 +150,32 @@ public interface UserMapper {
      * @return
      */
     void selectUserById(SysUser user);
+
+    /**
+     * 使用存储过程分页查询
+     *
+     * @param userName
+     * @param pageNum
+     * @param pageSize
+     * @param total
+     * @return
+     */
+    List<SysUser> selectUserPage(Map<String, Object> params);
+
+    /**
+     * 保存用户信息和角色关联信息
+     *
+     * @param user
+     * @param roleIds
+     * @return
+     */
+    int insertUserAndRoles(@Param("user")SysUser user, @Param("roleIds")String roleIds);
+
+    /**
+     * 根据用户 id 删除用户和用户的角色信息
+     *
+     * @param id
+     * @return
+     */
+    int deleteUserById(Long id);
 }

@@ -5,9 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class UserMapperTest extends BaseMapperTest {
 
@@ -364,6 +362,58 @@ public class UserMapperTest extends BaseMapperTest {
             Assert.assertNotNull(user.getUserName());
             System.out.println("用户名：" + user.getUserName());
             System.out.println("email:" + user.getUserEmail());
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectUserPage(){
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("userName", "ad");
+            params.put("offset", 0);
+            params.put("limit", 10);
+            List<SysUser> userList = userMapper.selectUserPage(params);
+            Long total = (Long) params.get("total");
+            System.out.println("总数:" + total);
+            for(SysUser user : userList){
+                System.out.println("用户名：" + user.getUserName());
+            }
+        } finally {
+            //不要忘记关闭 sqlSession
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testInsertAndDelete(){
+        //获取 sqlSession
+        SqlSession sqlSession = getSqlSession();
+        try {
+            //获取 UserMapper 接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            SysUser user = new SysUser();
+            user.setUserName("test1");
+            user.setUserPassword("123456");
+            user.setUserEmail("test@mybatis.tk");
+            user.setUserInfo("test info");
+            //正常情况下应该读入一张图片存到 byte 数组中
+            user.setHeadImg(new byte[]{1,2,3});
+            //插入数据
+            userMapper.insertUserAndRoles(user, "1,2");
+            Assert.assertNotNull(user.getId());
+            Assert.assertNotNull(user.getCreateTime());
+            //可以执行下面的 commit 后查看数据库中的数据
+            //sqlSession.commit();
+            //测试删除刚刚插入的数据
+            userMapper.deleteUserById(user.getId());
         } finally {
             //不要忘记关闭 sqlSession
             sqlSession.close();

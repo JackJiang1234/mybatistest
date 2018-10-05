@@ -6,6 +6,9 @@
     <settings>
         <setting name="logImpl" value="LOG4J"/>
         <setting name="aggressiveLazyLoading" value="true" />
+
+        <!--二级缓存全局设置 -->
+        <setting name="cacheEnabled" value="true" />
     </settings>
 
     <typeAliases>
@@ -13,9 +16,15 @@
     </typeAliases>
 
     <typeHandlers>
+
         <typeHandler
                 javaType="jack.mybatis.simple.type.Enabled"
                 handler="jack.mybatis.simple.type.EnabledTypeHandler"/>
+        <!--
+        <typeHandler
+                javaType="jack.mybatis.simple.type.Enabled"
+                handler= "org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+          -->
     </typeHandlers>
 
     <environments default="development">

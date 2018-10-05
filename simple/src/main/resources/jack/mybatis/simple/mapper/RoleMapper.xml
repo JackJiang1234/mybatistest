@@ -3,6 +3,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="jack.mybatis.simple.mapper.RoleMapper">
     <!--
+    <cache eviction="LRU" size="1024" readOnly="false"></cache>
+    -->
+    <!--
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache" />
+    -->
+    <cache type="org.mybatis.caches.redis.RedisCache" />
+    <!--
     <resultMap id="roleMap" type="jack.mybatis.simple.model.SysRole">
         <id property="id" column="id"/>
         <result property="roleName" column="role_name"/>
