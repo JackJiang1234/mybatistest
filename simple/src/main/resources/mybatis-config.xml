@@ -32,7 +32,7 @@
             <transactionManager type="JDBC">
                 <property name="" value=""/>
             </transactionManager>
-            <dataSource type="UNPOOLED">
+            <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <!--company -->
                 <!--
