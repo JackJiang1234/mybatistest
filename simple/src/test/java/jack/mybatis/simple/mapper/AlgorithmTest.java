@@ -196,7 +196,7 @@ public class AlgorithmTest {
     }
 
     @Test
-    public void lengthOfLongestSubstringTest(){
+    public void lengthOfLongestSubstringTest() {
         Assert.assertEquals(3, lengthOfLongestSubstring("abcabcbb"));
         Assert.assertEquals(1, lengthOfLongestSubstring("bbbbb"));
         Assert.assertEquals(3, lengthOfLongestSubstring("pwwkew"));
@@ -234,7 +234,7 @@ public class AlgorithmTest {
         for (int i = 0; i < s.length(); i++) {
             c = s.charAt(i);
             index = subString.indexOf(c);
-            if (index >= 0){
+            if (index >= 0) {
                 if (subString.size() > subMaxLength) {
                     subMaxLength = subString.size();
                 }
@@ -253,7 +253,7 @@ public class AlgorithmTest {
      * res 不重复子串长度， left表示记录不重复子串的左边界，right记录右边界
      * 当测试hashset包含重复字符时，把重复字符和重复之前的所有字符要从hashset中移除
      * 不包含重复字符时，直接添加至hashset，并将hashset长度与sublength比较，取最大值
-     * */
+     */
     private int lengthOfLongestSubstring2(String s) {
         int res = 0, left = 0, right = 0;
         HashSet<Character> t = new HashSet<>();
@@ -269,22 +269,46 @@ public class AlgorithmTest {
     }
 
     /**
-     *There are two sorted arrays nums1 and nums2 of size m and n respectively.
+     * There are two sorted arrays nums1 and nums2 of size m and n respectively.
      * Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
      * You may assume nums1 and nums2 cannot be both empty.
-     *
+     * <p>
      * Example 1:
      * nums1 = [1, 3]
      * nums2 = [2]
      * The median is 2.0
-     *
+     * <p>
      * Example 2:
      * nums1 = [1, 2]
      * nums2 = [3, 4]
      * The median is (2 + 3)/2 = 2.5
-     *
-     * */
+     */
     private double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        return 0;
+        int m = nums1.length, n = nums2.length, left = (m + n + 1) / 2, right = (m + n + 2) / 2;
+        return (findKth(nums1, 0, nums2, 0, left) + findKth(nums1, 0, nums2, 0, right)) / 2.0;
+    }
+
+    /**
+     * 二分查找
+     * A数组的中间元素与B数组的中间元素相比较，从而删掉较小元素所在数组的前一半和较大元素所在数组的后一半
+     * */
+    int findKth(int[] nums1, int i, int[] nums2, int j, int k) {
+
+        if (i >= nums1.length) {
+            return nums2[j + k - 1];
+        }
+        if (j >= nums2.length) {
+            return nums1[i + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(nums1[i], nums2[j]);
+        }
+        int midVal1 = (i + k / 2 - 1 < nums1.length) ? nums1[i + k / 2 - 1] : Integer.MAX_VALUE;
+        int midVal2 = (j + k / 2 - 1 < nums2.length) ? nums2[j + k / 2 - 1] : Integer.MAX_VALUE;
+        if (midVal1 < midVal2) {
+            return findKth(nums1, i + k / 2, nums2, j, k - k / 2);
+        } else {
+            return findKth(nums1, i, nums2, j + k / 2, k - k / 2);
+        }
     }
 }
